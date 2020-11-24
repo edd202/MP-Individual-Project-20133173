@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="평수: "
+        android:textSize="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@id/text_size"
+        android:layout_toRightOf="@+id/text_size"
+        />
+
+    <TextView
+        android:id="@+id/text_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종류: "
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_size"
+        android:layout_alignLeft="@+id/text_size"
+        />
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="스타힐스"
+        android:textSize="30dp"
+        android:id="@+id/check_starhills"
+        android:layout_toRightOf="@+id/text_direction"
+        android:layout_alignBottom="@+id/text_direction"
+        android:layout_alignTop="@+id/text_direction" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="센텀시티"
+        android:textSize="30dp"
+        android:id="@+id/check_centom"
+        android:layout_toRightOf="@+id/check_starhills"
+        android:layout_alignBottom="@+id/text_direction"
+        android:layout_alignTop="@+id/text_direction" />
+
+    <CheckBox
+        android:id="@+id/check_sang_ga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_direction"
+        android:layout_alignBottom="@+id/text_direction"
+        android:layout_toRightOf="@+id/check_centom"
+        android:text="상가"
+        android:textSize="30dp" />
+
+    <!--    <EditText-->
+<!--        android:id="@+id/edit_direction"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:maxLength="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:layout_alignBaseline="@+id/text_direction"-->
+<!--        android:layout_alignBottom="@+id/text_direction"-->
+<!--        android:layout_alignEnd="@+id/edit_size"-->
+<!--        android:layout_toEndOf="@+id/text_direction"-->
+<!--        android:layout_alignRight="@+id/edit_size"-->
+<!--        android:layout_toRightOf="@+id/text_direction" />-->
+
+    <TextView
+        android:id="@+id/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시세: "
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_direction"
+        android:layout_alignLeft="@+id/text_direction"
+        />
+
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/text_price"
+        android:layout_alignBottom="@+id/text_price"
+        android:layout_toEndOf="@+id/text_price"
+        android:layout_toRightOf="@+id/text_price" />
+
+
+    <TextView
+        android:id="@+id/text_Lease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="판매형태: "
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_price"
+        android:layout_alignLeft="@+id/text_price"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전세"
+        android:textSize="30dp"
+        android:id="@+id/check_junse"
+        android:layout_toRightOf="@+id/text_Lease"
+        android:layout_alignBottom="@+id/text_Lease"
+        android:layout_alignTop="@+id/text_Lease" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="월세"
+        android:textSize="30dp"
+        android:id="@+id/check_walse"
+        android:layout_toRightOf="@+id/check_junse"
+        android:layout_alignBottom="@+id/text_Lease"
+        android:layout_alignTop="@+id/text_Lease" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="매매"
+        android:textSize="30dp"
+        android:id="@+id/check_mama"
+        android:layout_toRightOf="@+id/check_walse"
+        android:layout_alignBottom="@+id/text_Lease"
+        android:layout_alignTop="@+id/text_Lease" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_Loc"
+        android:text="호수 :"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_Lease"
+        android:layout_alignLeft="@+id/text_Lease"/>
+
+    <EditText
+        android:id="@+id/edit_Loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/text_Loc"
+        android:layout_alignBottom="@+id/text_Loc"
+        android:layout_alignEnd="@+id/edit_price"
+        android:layout_toEndOf="@+id/text_Loc"
+        android:layout_alignRight="@+id/edit_price"
+        android:layout_toRightOf="@+id/text_Loc" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_phone"
+        android:text="번호 :"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_Loc"
+        android:layout_alignLeft="@+id/text_Loc"/>
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/text_phone"
+        android:layout_alignBottom="@+id/text_phone"
+        android:layout_alignEnd="@+id/edit_price"
+        android:layout_toEndOf="@+id/text_phone"
+        android:layout_alignRight="@+id/edit_price"
+        android:layout_toRightOf="@+id/text_phone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_option"
+        android:text="옵션 :"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_phone"
+        android:layout_alignLeft="@+id/text_phone"/>
+
+    <EditText
+        android:id="@+id/edit_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/text_option"
+        android:layout_alignBottom="@+id/text_option"
+        android:layout_alignEnd="@+id/edit_price"
+        android:layout_toEndOf="@+id/text_etc"
+        android:layout_alignRight="@+id/edit_price"
+        android:layout_toRightOf="@+id/text_etc" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_etc"
+        android:text="기타 :"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_option"
+        android:layout_alignLeft="@+id/text_option"/>
+
+    <EditText
+        android:id="@+id/edit_etc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/text_etc"
+        android:layout_alignBottom="@+id/text_etc"
+        android:layout_alignEnd="@+id/edit_price"
+        android:layout_toEndOf="@+id/text_etc"
+        android:layout_alignRight="@+id/edit_price"
+        android:layout_toRightOf="@+id/text_etc" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/text_etc"
+        android:layout_marginTop="20dp"
+        android:background="#AAAAAA"/>
+
+    <TextView
+        android:id="@+id/text_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="정렬 "
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/text_size"
+        android:layout_below="@+id/line1"/>
+
+    <CheckBox
+        android:id="@+id/check_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="평수"
+        android:textSize="30dp"
+        android:layout_toRightOf="@+id/text_sort"
+        android:layout_alignBottom="@+id/text_sort"
+        android:layout_marginLeft="30dp"
+        android:layout_alignTop="@+id/text_sort" />
+
+
+    <CheckBox
+        android:id="@+id/check_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시세"
+        android:textSize="30dp"
+        android:layout_toRightOf="@+id/check_size"
+        android:layout_alignBottom="@+id/text_sort"
+        android:layout_marginLeft="30dp"
+        android:layout_alignTop="@+id/text_sort" />
+
+
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#AFEEEE"
+        android:text="검색"
+        android:layout_alignBaseline="@+id/check_price"
+        android:layout_alignBottom="@+id/check_price"
+        android:layout_alignStart="@+id/btn_update"
+        android:layout_alignLeft="@+id/btn_update" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/text_sort"
+        android:layout_marginTop="20dp"
+        android:background="#AAAAAA"/>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line2"
+        android:layout_marginTop="5dp"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+        <ListView
+            android:id="@+id/db_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/check_mama"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/edit_Loc"
+        android:layout_toRightOf="@+id/edit_Loc"
+        android:background="#AFEEEE"
+        android:text="건물 추가" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_insert"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/edit_Loc"
+        android:layout_toRightOf="@+id/edit_Loc"
+        android:background="#AFEEEE"
+        android:text="건물 수정" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_update"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/edit_option"
+        android:layout_toRightOf="@+id/edit_option"
+        android:background="#AFEEEE"
+        android:text="건물 삭제" />
+
+
+</RelativeLayout>
