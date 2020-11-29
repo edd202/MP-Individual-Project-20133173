@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="star">
+        <item>101동</item>
+        <item>102동</item>
+        <item>103동</item>
+        <item>104동</item>
+        <item>105동</item>
+        <item>106동</item>
+        <item>107동</item>
+        <item>108동</item>
+        <item>109동</item>
+        <item>110동</item>
+        <item>111동</item>
+        <item>112동</item>
+        <item>113동</item>
+        <item>114동</item>
+        <item>115동</item>
+        <item>116동</item>
+    </string-array>
+
+    <string-array name="star_floor">
+        <item>1층</item>
+        <item>2층</item>
+        <item>3층</item>
+        <item>4층</item>
+        <item>5층</item>
+        <item>6층</item>
+        <item>7층</item>
+        <item>8층</item>
+        <item>9층</item>
+        <item>10층</item>
+        <item>11층</item>
+        <item>12층</item>
+        <item>13층</item>
+        <item>14층</item>
+        <item>15층</item>
+        <item>16층</item>
+        <item>17층</item>
+        <item>18층</item>
+        <item>19층</item>
+        <item>20층</item>
+        <item>21층</item>
+        <item>22층</item>
+        <item>23층</item>
+        <item>24층</item>
+        <item>25층</item>
+        <item>26층</item>
+        <item>27층</item>
+        <item>28층</item>
+        <item>29층</item>
+    </string-array>
+
+    <string-array name="star_room">
+        <item>1호</item>
+        <item>2호</item>
+        <item>3호</item>
+        <item>4호</item>
+    </string-array>
+    <string-array name="centom">
+        <item>101동</item>
+        <item>102동</item>
+        <item>103동</item>
+        <item>104동</item>
+        <item>105동</item>
+        <item>106동</item>
+        <item>107동</item>
+        <item>108동</item>
+        <item>109동</item>
+        <item>110동</item>
+        <item>111동</item>
+        <item>112동</item>
+        <item>113동</item>
+        <item>114동</item>
+        <item>115동</item>
+        <item>116동</item>
+        <item>117동</item>
+        <item>118동</item>
+        <item>119동</item>
+        <item>120동</item>
+        <item>121동</item>
+    </string-array>
+
+    <string-array name="centom_floor">
+        <item>1층</item>
+        <item>2층</item>
+        <item>3층</item>
+        <item>4층</item>
+        <item>5층</item>
+        <item>6층</item>
+        <item>7층</item>
+        <item>8층</item>
+        <item>9층</item>
+        <item>10층</item>
+        <item>11층</item>
+        <item>12층</item>
+        <item>13층</item>
+        <item>14층</item>
+        <item>15층</item>
+        <item>16층</item>
+        <item>17층</item>
+        <item>18층</item>
+        <item>19층</item>
+        <item>20층</item>
+        <item>21층</item>
+        <item>22층</item>
+        <item>23층</item>
+        <item>24층</item>
+        <item>25층</item>
+        <item>26층</item>
+        <item>27층</item>
+        <item>28층</item>
+        <item>29층</item>
+    </string-array>
+
+    <string-array name="centom_room">
+        <item>1호</item>
+        <item>2호</item>
+        <item>3호</item>
+        <item>4호</item>
+    </string-array>
+</resources>
