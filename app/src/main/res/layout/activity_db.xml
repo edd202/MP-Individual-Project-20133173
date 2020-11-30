@@ -198,7 +198,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:maxLength="10"
-        android:hint="ex)607동608호"
+        android:hint="ex)607-608"
         android:inputType="textPersonName"
         android:layout_alignBaseline="@+id/text_Loc"
         android:layout_alignBottom="@+id/text_Loc"

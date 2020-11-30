@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -24,186 +23,135 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="조감도"
-                    android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:textSize="50dp"/>
+                    android:text="조감도"
+                    android:textSize="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"/>
 
             </RelativeLayout>
+
         </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="400dp"
+            android:id="@+id/image"
             android:src="@drawable/map"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="건물 명칭"
+            android:id="@+id/text_name"
             android:textSize="80dp"
-            android:padding="50dp"
+            android:padding="20dp"
             android:gravity="center"/>
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_A"
-                android:textSize="50dp"
-                android:text="A"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_B"
-                android:textSize="50dp"
-                android:text="B"/>
-        </RadioGroup>
 
-        <RadioGroup
+        <RelativeLayout
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="평수"
+                android:textSize="50dp"
+                android:id="@+id/text_size"
+                android:layout_marginLeft="20dp"/>
+
+            <CheckBox
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A1"
-                    android:id="@+id/btn_A1"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
+                android:layout_height="wrap_content"
+                android:text="A1"
+                android:textSize="45dp"
+                android:id="@+id/btn_A1"
+                android:layout_below="@+id/text_size"
+                android:layout_marginTop="40dp"
+                android:layout_alignLeft="@+id/check_lease"
+                android:layout_marginLeft="60dp"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A2"
-                    android:id="@+id/btn_A2"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A3"
-                    android:id="@+id/btn_A3"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A4"
-                    android:id="@+id/btn_A4"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <CheckBox
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="105동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
+                android:layout_height="wrap_content"
+                android:text="A2"
+                android:textSize="45dp"
+                android:id="@+id/btn_A2"
+                android:layout_alignBaseline="@id/btn_A1"
+                android:layout_toRightOf="@id/btn_A1"
+                android:layout_marginLeft="60dp"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="106동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="107동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="108동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-            </LinearLayout>
-            <LinearLayout
+            <CheckBox
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="109동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
+                android:layout_height="wrap_content"
+                android:text="A3"
+                android:textSize="45dp"
+                android:id="@+id/btn_A3"
+                android:layout_alignBaseline="@id/btn_A1"
+                android:layout_toRightOf="@id/btn_A2"
+                android:layout_marginLeft="60dp"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="110동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="111동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="112동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-            </LinearLayout>
-            <LinearLayout
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="계약형태"
+                android:textSize="50dp"
+                android:id="@+id/check_lease"
+                android:layout_below="@+id/btn_A1"
+                android:layout_marginTop="30dp"
+                android:layout_alignLeft="@+id/text_size"/>
+            
+            <CheckBox
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="113동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
+                android:layout_height="wrap_content"
+                android:text="전세"
+                android:textSize="45dp"
+                android:id="@+id/btn_B1"
+                android:layout_below="@id/check_lease"
+                android:layout_marginTop="40dp"
+                android:layout_alignLeft="@id/btn_A1"
+                android:visibility="invisible"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="114동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월세"
+                android:textSize="45dp"
+                android:id="@+id/btn_B2"
+                android:layout_alignBaseline="@id/btn_B1"
+                android:layout_toRightOf="@id/btn_B1"
+                android:layout_marginLeft="60dp"
+                android:visibility="invisible"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="115동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매매"
+                android:textSize="45dp"
+                android:id="@+id/btn_B3"
+                android:layout_alignBaseline="@id/btn_B1"
+                android:layout_toRightOf="@id/btn_B2"
+                android:layout_marginLeft="60dp"
+                android:visibility="invisible"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="116동"
-                    android:textSize="50dp"
-                    android:padding="10dp"/>
-            </LinearLayout>
-        </RadioGroup>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="50dp"
+                android:text="선택"
+                android:id="@+id/btn_ok"
+                android:layout_below="@id/check_lease"
+                android:layout_marginTop="130dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="50dp"
-            android:text="선택"/>
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 </ScrollView>

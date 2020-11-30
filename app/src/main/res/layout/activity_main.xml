@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
+
     tools:context=".MainActivity">
 
     <TextView
@@ -20,28 +21,32 @@
         android:layout_height="100dp"
         android:id="@+id/btn_star"
         android:textSize="50dp"
-        android:text="서희 스타힐스"/>
+        android:text="서희 스타힐스"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/btn_centom"
         android:textSize="50dp"
-        android:text="센텀시티" />
+        android:text="센텀시티"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/btn_sang_ga"
         android:textSize="50dp"
-        android:text="상가"/>
+        android:text="상가"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/btn_DB"
         android:textSize="50dp"
-        android:text="DB 관리"/>
+        android:text="DB 관리"
+        android:layout_marginTop="20dp"/>
 
 
 

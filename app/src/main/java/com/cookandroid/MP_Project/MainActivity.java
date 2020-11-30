@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btn_sang_ga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),SelectionActivity.class);
+                Intent intent = new Intent(getApplicationContext(),ResultActivity.class);
                 intent.putExtra("type","sang_ga");
                 startActivity(intent);
             }
