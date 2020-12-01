@@ -3,37 +3,22 @@ package com.cookandroid.MP_Project;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btn_star, btn_centom, btn_sang_ga, btn_DB;
     static final int FILE_READ_PERMISSION=1;
-    static final int FILE_WRITE_PERMISSION=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        int Read_permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        int Write_permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
         if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.READ_EXTERNAL_STORAGE))
         {
@@ -92,4 +77,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-

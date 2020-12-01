@@ -91,8 +91,8 @@ public class DBOpenHelper {
         return mDB.delete(DataBases.CreateDB._TABLENAME0, "_id="+id, null) > 0;
     }
     // Select DB
-    public Cursor selectColumns(){
-        return mDB.query(DataBases.CreateDB._TABLENAME0, null, null, null, null, null, null);
+    public Cursor selectColumns(String where){
+        return mDB.query(DataBases.CreateDB._TABLENAME0, null, where, null, null, null, null);
     }
 
     // sort by column
