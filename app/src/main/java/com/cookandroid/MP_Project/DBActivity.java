@@ -2,6 +2,7 @@ package com.cookandroid.MP_Project;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,50 +15,27 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 
 public class DBActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText edit_size;
-    EditText edit_price;
-    EditText edit_loc;
-    EditText edit_phone;
-    EditText edit_option;
-    EditText edit_etc;
-
-    CheckBox check_size_A1;
-    CheckBox check_size_A2;
-    CheckBox check_size_A3;
-
-    CheckBox check_starhills;
-    CheckBox check_centom;
-    CheckBox check_sang_ga;
-    CheckBox check_junse;
-    CheckBox check_walse;
-    CheckBox check_mama;
-
-    CheckBox check_size;
-    CheckBox check_direction;
-    CheckBox check_price;
-
-    Button btn_update;
-    Button btn_insert;
-    Button btn_select;
-    Button btn_delete;
+    EditText edit_size, edit_price, edit_loc, edit_phone, edit_option, edit_etc;
+    CheckBox check_size_A1, check_size_A2, check_size_A3,
+            check_starhills, check_centom, check_sang_ga,
+            check_junse, check_walse, check_mama,
+            check_size, check_direction,check_price;
+    Button btn_update, btn_insert, btn_select, btn_delete, btn_import, btn_export;
 
     long nowIndex;
-    String SIZE;
-    String DIRECTION;
-    String PRICE;
-    String JUNWALMA = "";
-    String LOC;
-    String PHONE;
-    String OPTION;
-    String ETC;
-
+    String SIZE, DIRECTION, PRICE, JUNWALMA = "", LOC, PHONE, OPTION, ETC;
     String sort = "size";//평수 시세
 
     ArrayAdapter<String> arrayAdapter;
-
     static ArrayList<String> arrayIndex = new ArrayList<String>();
     static ArrayList<String> arrayData = new ArrayList<String>();
     private DBOpenHelper mDBOpenHelper;
@@ -75,6 +53,10 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
         btn_update.setOnClickListener(this);
         btn_delete = (Button) findViewById(R.id.btn_delete);
         btn_delete.setOnClickListener(this);
+        btn_import = (Button) findViewById(R.id.btn_import);
+        btn_import.setOnClickListener(this);
+        btn_export = (Button) findViewById(R.id.btn_export);
+        btn_export.setOnClickListener(this);
 
         edit_size = (EditText) findViewById(R.id.edit_size);
         edit_price = (EditText) findViewById(R.id.edit_price);
@@ -143,6 +125,7 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
 
         check_size.setChecked(false);
         check_price.setChecked(false);
+        check_size.setChecked(true);
         btn_insert.setEnabled(true);
         btn_update.setEnabled(false);
         btn_delete.setEnabled(false);
@@ -427,6 +410,74 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
                 setInsertMode();
                 edit_size.requestFocus();
                 edit_size.setCursorVisible(true);
+                mDBOpenHelper.close();
+                break;
+            }
+
+            case R.id.btn_import:
+            {
+                mDBOpenHelper.open();
+                try {
+                    File sd = Environment.getExternalStorageDirectory();
+                    File data = Environment.getDataDirectory();
+
+                    if (sd.canWrite()) {
+                        File backupDB = new File(data, "/data/com.cookandroid.MP_Project//databases/manager_SQLite.db");
+                        File currentDB = new File(sd, "Backup/DB_backup.db");
+
+                        FileChannel src = new FileInputStream(currentDB).getChannel();
+                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
+
+                        dst.transferFrom(src, 0, src.size());
+                        src.close();
+                        dst.close();
+
+                        Toast.makeText(getApplicationContext(),
+                                "복원 완료", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(),
+                            "복원이 실패 하였습니다.", Toast.LENGTH_SHORT).show();
+                }
+                setInsertMode();
+                showDatabase(sort);
+                mDBOpenHelper.close();
+                break;
+            }
+
+            case R.id.btn_export:
+            {
+                mDBOpenHelper.open();
+                try
+                {
+                    File sd = Environment.getExternalStorageDirectory();
+                    File data = Environment.getDataDirectory();
+
+                    if (sd.canWrite())
+                    {
+                        File BackupDir = new File(sd, "Backup");
+                        BackupDir.mkdir();
+
+                        File currentDB =
+                                new File(data, "/data/com.cookandroid.MP_Project//databases/manager_SQLite.db");
+                        File backupDB = new File(sd, "Backup/DB_backup.db");
+                        System.out.println(String.valueOf(currentDB));
+                        System.out.println(String.valueOf(backupDB));
+                        FileChannel src = new FileInputStream(currentDB).getChannel();
+                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                        dst.transferFrom(src, 0, src.size());
+                        src.close();
+                        dst.close();
+                    }
+
+                    Toast.makeText(this,"백업 완료", Toast.LENGTH_SHORT).show();
+                }
+                catch (Exception e)
+                {
+                    Toast.makeText(this, "백업이 실패 하였습니다.", Toast.LENGTH_SHORT).show();
+                }
+                setInsertMode();
+                showDatabase(sort);
                 mDBOpenHelper.close();
                 break;
             }

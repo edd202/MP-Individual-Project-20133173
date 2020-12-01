@@ -223,7 +223,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:maxLength="10"
+        android:maxLength="13"
         android:hint="ex)010-9945-7651"
         android:inputType="textPersonName"
         android:layout_alignBaseline="@+id/text_phone"
@@ -413,6 +413,33 @@
         android:layout_toRightOf="@+id/edit_option"
         android:background="#AFEEEE"
         android:text="건물 삭제" />
+
+
+    <Button
+        android:id="@+id/btn_import"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/check_mama"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_toEndOf="@+id/btn_insert"
+        android:layout_toRightOf="@+id/btn_insert"
+        android:background="#AFEEEE"
+        android:text="DB 불러오기" />
+
+    <Button
+        android:id="@+id/btn_export"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_import"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/btn_insert"
+        android:layout_toRightOf="@+id/btn_insert"
+        android:background="#AFEEEE"
+        android:text="DB 내보내기" />
 
 
 </RelativeLayout>
