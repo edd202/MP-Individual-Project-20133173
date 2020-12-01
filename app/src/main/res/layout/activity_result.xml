@@ -17,267 +17,247 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메인화면"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="30dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="평면도"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
                     android:id="@+id/picName"
                     android:textSize="50dp"/>
 
-                <Button
-                    android:id="@+id/btn0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="메인화면"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
             </RelativeLayout>
 
-
             <ImageView
-                android:id="@+id/pic"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/a59" />
+                android:layout_height="400dp"
+                android:id="@+id/image"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginVertical="10dp"
-                android:layout_gravity="center">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="50dp"
-                    android:id="@+id/btn1"
-                    android:text="이전 사진"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="50dp"
-                    android:id="@+id/btn2"
-                    android:text="다음 사진"/>
-            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="평형"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="59A형(21평)"
-                    android:id="@+id/size"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="30dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="방향"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="남동향"
-                    android:id="@+id/compass"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="30dp"/>
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="평균시세"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="1.1~1.2억 원"
-                    android:id="@+id/price"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="30dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="판매형태"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="전세"
-                    android:id="@+id/sel"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="30dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="위치"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="116동 701호"
-                    android:id="@+id/location"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="30dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="전화번호"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="010-xxxx-zzzz"
-                    android:id="@+id/phone"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="30dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="옵션"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="에어컨, 배란다 확장"
-                    android:id="@+id/option"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="30dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="기타"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="산책로, 아파트내 도서관"
-                    android:id="@+id/etc"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="30dp"/>
-
-            </RelativeLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:text="평수 : "
+                android:textSize="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
 
-                android:layout_marginVertical="10dp"
-                android:layout_gravity="center">
+            <TextView
+                android:id="@+id/db_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="35dp"
+                android:hint="일단 임시로 적어봄"
+                android:inputType="textPersonName"
+                android:layout_alignBaseline="@id/text_size"
+                android:layout_toRightOf="@+id/text_size"
+                android:layout_marginLeft="70dp"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="50dp"
-                    android:id="@+id/btn3"
-                    android:text="이전 건물"/>
+            <TextView
+                android:id="@+id/text_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="종류 : "
+                android:textSize="35dp"
+                android:layout_below="@id/text_size"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="50dp"
-                    android:id="@+id/btn4"
-                    android:text="다음 건물"/>
-            </LinearLayout>
-        </LinearLayout>
+            <TextView
+                android:id="@+id/db_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="35dp"
+                android:hint="일단 임시로 적어봄"
+                android:inputType="textPersonName"
+                android:layout_below="@id/text_size"
+                android:layout_alignBaseline="@id/text_direction"
+                android:layout_toRightOf="@id/text_direction"
+                android:layout_marginLeft="70dp"/>
+
+            <TextView
+                android:id="@+id/text_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매매가 : "
+                android:textSize="35dp"
+                android:layout_below="@id/text_direction"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/db_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_direction"
+                android:layout_alignBaseline="@id/text_price"
+                android:layout_alignStart="@+id/db_direction"
+                android:layout_toRightOf="@id/text_price"
+                android:ems="10"
+                android:hint="일단 임시로 적어봄"
+                android:inputType="textPersonName"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/text_lease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="판매형태 : "
+                android:textSize="35dp"
+                android:layout_below="@id/text_price"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/db_lease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_price"
+                android:layout_alignBaseline="@id/text_lease"
+                android:layout_alignStart="@+id/db_direction"
+                android:layout_toRightOf="@id/text_lease"
+                android:ems="10"
+                android:hint="일단 임시로 적어봄"
+                android:inputType="textPersonName"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/text_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="호수 : "
+                android:textSize="35dp"
+                android:layout_below="@id/text_lease"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/db_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_lease"
+                android:layout_alignBaseline="@id/text_loc"
+                android:layout_alignStart="@+id/db_direction"
+                android:layout_toRightOf="@id/text_loc"
+                android:ems="10"
+                android:hint="일단 임시로 적어봄"
+                android:inputType="textPersonName"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/text_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="번호 : "
+                android:textSize="35dp"
+                android:layout_below="@id/text_loc"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/db_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_loc"
+                android:layout_alignBaseline="@id/text_phone"
+                android:layout_alignStart="@+id/db_direction"
+                android:layout_toRightOf="@id/text_phone"
+                android:ems="10"
+                android:hint="일단 임시로 적어봄"
+                android:inputType="textPersonName"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/text_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="옵션 : "
+                android:textSize="35dp"
+                android:layout_below="@id/text_phone"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/db_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_phone"
+                android:layout_alignBaseline="@id/text_option"
+                android:layout_alignStart="@+id/db_direction"
+                android:layout_toRightOf="@id/text_option"
+                android:ems="10"
+                android:hint="일단 임시로 적어봄"
+                android:inputType="textPersonName"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/text_etc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기타 : "
+                android:textSize="35dp"
+                android:layout_below="@id/text_option"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/db_etc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_option"
+                android:layout_alignBaseline="@id/text_etc"
+                android:layout_alignStart="@+id/db_direction"
+                android:layout_toRightOf="@id/text_etc"
+                android:ems="10"
+                android:hint="일단 임시로 적어봄"
+                android:inputType="textPersonName"
+                android:textSize="35dp" />
+
+             <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="이전 건물"
+                 android:textSize="35dp"
+                 android:id="@+id/btn_pre"
+                 android:layout_below="@+id/text_etc"
+                 android:layout_marginTop="20dp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_marginLeft="200dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다음 건물"
+                android:textSize="35dp"
+                android:id="@+id/btn_next"
+                android:layout_below="@id/text_etc"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="200dp"/>
+
+        </RelativeLayout>
     </LinearLayout>
-
 </ScrollView>

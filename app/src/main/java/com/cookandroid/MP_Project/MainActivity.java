@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),SelectionActivity.class);
-                intent.putExtra("type","star");
+                intent.putExtra("type","스타힐스");
                 startActivity(intent);
             }
         });
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),SelectionActivity.class);
-                intent.putExtra("type","centom");
+                intent.putExtra("type","센텀");
                 startActivity(intent);
             }
         });
@@ -75,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),ResultActivity.class);
-                intent.putExtra("type","sang_ga");
+                intent.putExtra("SIZE","");
+                intent.putExtra("JUNWALMA", "");
+                intent.putExtra("DIRECTION","상가");
                 startActivity(intent);
             }
         });
