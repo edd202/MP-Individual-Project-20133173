@@ -461,8 +461,7 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
                         File currentDB =
                                 new File(data, "/data/com.cookandroid.MP_Project//databases/manager_SQLite.db");
                         File backupDB = new File(sd, "Backup/DB_backup.db");
-                        System.out.println(String.valueOf(currentDB));
-                        System.out.println(String.valueOf(backupDB));
+
                         FileChannel src = new FileInputStream(currentDB).getChannel();
                         FileChannel dst = new FileOutputStream(backupDB).getChannel();
                         dst.transferFrom(src, 0, src.size());

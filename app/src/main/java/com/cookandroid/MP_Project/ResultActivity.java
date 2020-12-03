@@ -22,14 +22,8 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
              db_size, db_direction, db_price, db_lease, db_loc, db_phone, db_option, db_etc;
 
     int i=0;
-    long nowIndex;
-    String SIZE, DIRECTION, PRICE, JUNWALMA = "", LOC, PHONE, OPTION, ETC;
-    String sort = "size";
     String Where="direction=";
 
-    ArrayAdapter<String> arrayAdapter;
-    static ArrayList<String> arrayIndex = new ArrayList<String>();
-    static ArrayList<String> arrayData = new ArrayList<String>();
     private DBOpenHelper mDBOpenHelper;
 
     @Override
