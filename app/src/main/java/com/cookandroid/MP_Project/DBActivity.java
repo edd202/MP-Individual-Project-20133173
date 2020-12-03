@@ -147,6 +147,10 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
                 check_starhills.setChecked(true);
                 check_centom.setChecked(false);
                 check_sang_ga.setChecked(false);
+                edit_size.setVisibility(View.INVISIBLE);
+                check_size_A1.setVisibility(View.VISIBLE);
+                check_size_A2.setVisibility(View.VISIBLE);
+                check_size_A3.setVisibility(View.VISIBLE);
                 DIRECTION="서희스타힐스";
                 if(edit_size.getText().toString().equals("24"))
                 {
@@ -171,6 +175,10 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
                 check_starhills.setChecked(false);
                 check_centom.setChecked(true);
                 check_sang_ga.setChecked(false);
+                edit_size.setVisibility(View.INVISIBLE);
+                check_size_A1.setVisibility(View.VISIBLE);
+                check_size_A2.setVisibility(View.VISIBLE);
+                check_size_A3.setVisibility(View.VISIBLE);
                 DIRECTION="센텀시티";
                 if(edit_size.getText().toString().equals("25"))
                 {
@@ -195,6 +203,10 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
                 check_starhills.setChecked(false);
                 check_centom.setChecked(false);
                 check_sang_ga.setChecked(true);
+                edit_size.setVisibility(View.VISIBLE);
+                check_size_A1.setVisibility(View.INVISIBLE);
+                check_size_A2.setVisibility(View.INVISIBLE);
+                check_size_A3.setVisibility(View.INVISIBLE);
                 DIRECTION="상가";
             }
 
@@ -202,12 +214,18 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
 
             if(tempData[13].trim().equals("전세")){
                 check_junse.setChecked(true);
+                check_walse.setChecked(false);
+                check_mama.setChecked(false);
                 JUNWALMA = "전세";
             } else if (tempData[13].trim().equals("월세")){
                 check_walse.setChecked(true);
+                check_junse.setChecked(false);
+                check_mama.setChecked(false);
                 JUNWALMA = "월세";
             } else if(tempData[13].trim().equals("매매")){
                 check_mama.setChecked(true);
+                check_junse.setChecked(false);
+                check_walse.setChecked(false);
                 JUNWALMA = "매매";
             }
 
@@ -398,7 +416,9 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
 
             case R.id.btn_select:
             {
+                mDBOpenHelper.open();
                 showDatabase(sort);
+                mDBOpenHelper.close();
                 break;
             }
 
@@ -422,6 +442,11 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
                     File data = Environment.getDataDirectory();
 
                     if (sd.canWrite()) {
+
+                        File BackupDir = new File(sd, "Backup");
+                        BackupDir.mkdir();
+
+
                         File backupDB = new File(data, "/data/com.cookandroid.MP_Project//databases/manager_SQLite.db");
                         File currentDB = new File(sd, "Backup/DB_backup.db");
 
